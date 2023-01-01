@@ -1,0 +1,18 @@
+footer {
+    background: #000015;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+footer h3 {
+    font-weight: 100;
+    max-width: 50%;
+}
+
+footer span {
+    color: aqua;
+}

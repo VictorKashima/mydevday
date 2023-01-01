@@ -1,0 +1,17 @@
+nav {
+    background: #003;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > a {
+    font-size: 2rem;
+}
+
+nav div {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
