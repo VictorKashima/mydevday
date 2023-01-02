@@ -13,6 +13,7 @@ import { NewDayComponent } from './components/pages/new-day/new-day.component';
 import { MydevdayFormComponent } from './components/mydevday-form/mydevday-form.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DayComponent } from './components/pages/day/day.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     NewDayComponent,
     MydevdayFormComponent,
-    MessagesComponent
+    MessagesComponent,
+    DayComponent
   ],
   imports: [
     BrowserModule,

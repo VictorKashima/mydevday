@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="home-container">
+    <h1>Veja os dias compartilhados</h1>
+
+    <div class="search-container">
+
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input type="text" placeholder="Ou pesquise pelo título" (input)="search($event)">
+        </form>
+
+    </div>
+
+    <div *ngIf="days.length > 0; else noDays" class="before-days">
+        <div class="days-container">
+
+            <div *ngFor="let mydevday of days" class="days">
+                <img src="{{ baseApiUrl }}uploads/{{ mydevday.image }}" alt="{{ mydevday.title }}">
+                <h3> {{ mydevday.title }} </h3>
+                <p class="date">Data: {{ mydevday.created_at }}</p>
+                <p>Comentários: {{ mydevday.comments!.length }}</p>
+                <p><a routerLink="mydevdays/{{ mydevday.id }}">Detalhes</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <ng-template #noDays>
+        <h2>Não há publicações</h2>
+    </ng-template>
+
+</div>

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Mydevday } from 'src/app/Mydevday';
 
 import { MydevdayService } from 'src/app/services/mydevday.service';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-new-day',
@@ -13,7 +15,11 @@ export class NewDayComponent {
 
   btnText = "Compartilhar"
 
-  constructor(private mydevdayService: MydevdayService) {}
+  constructor (
+    private mydevdayService: MydevdayService,
+    private messageService: MessagesService,
+    private router: Router,
+    ) {}
 
   async createHandler(mydevday: Mydevday) {
 
@@ -30,8 +36,11 @@ export class NewDayComponent {
     await this.mydevdayService.createDay(formData).subscribe();
 
     // Exibir mensagem
+    this.messageService.add("Dia adicionado com sucesso!")
+
 
     // Redirect
+    this.router.navigate(['/']);
 
   }
 

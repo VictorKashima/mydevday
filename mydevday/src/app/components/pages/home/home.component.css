@@ -1,0 +1,75 @@
+.home-container {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+}
+
+.home-container>div div {
+    margin: 1rem;
+}
+
+.search-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container form {
+    width: 30%;
+    position: relative;
+}
+
+.search-container fa-icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.search-container input {
+    border-radius: 0;
+    text-align: center;
+}
+
+.before-days {
+    display: flex;
+    justify-content: center;
+}
+
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: space-between;
+}
+
+.days {
+    width: 30%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.days img {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.days h3, .days p {
+    margin-bottom: .5em;
+}
+
+.days .date {
+    font-size: .7em;
+    font-style: italic;
+}
+
+a {
+    color: #000;
+    padding: .5em 1em;
+}
+
+a:hover {
+    background: #efefef;
+}

@@ -2,6 +2,11 @@
     color: #000
 }
 
+.popup {
+    display: flex;
+    justify-content: center;
+}
+
 .message {
     position: fixed;
     top: 3rem;
