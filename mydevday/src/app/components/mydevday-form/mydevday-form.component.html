@@ -15,7 +15,7 @@
             </div>
         </label>
 
-        <label>Adicione uma imagem<input type="file"></label>
+        <label>Adicione uma imagem<input type="file" (change)="onFileSelected($event)"></label>
 
         <input type="submit" id="submit" value=" {{ btnText }}">
     </form>

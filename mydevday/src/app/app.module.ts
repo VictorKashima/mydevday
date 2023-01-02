@@ -11,6 +11,8 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NewDayComponent } from './components/pages/new-day/new-day.component';
 import { MydevdayFormComponent } from './components/mydevday-form/mydevday-form.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { MydevdayFormComponent } from './components/mydevday-form/mydevday-form.
     AboutComponent,
     HomeComponent,
     NewDayComponent,
-    MydevdayFormComponent
+    MydevdayFormComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { MydevdayFormComponent } from './components/mydevday-form/mydevday-form.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Mydevday } from 'src/app/Mydevday';
 
 @Component({
   selector: 'app-mydevday-form',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./mydevday-form.component.css']
 })
 export class MydevdayFormComponent {
+  @Output() onSubmit = new EventEmitter<Mydevday>()
   @Input() btnText!: string
 
   mydevdayForm!: FormGroup
@@ -33,7 +35,17 @@ export class MydevdayFormComponent {
       return;
     }
 
-    console.log("Enviado");
+    console.log(this.mydevdayForm.value);
+    this.onSubmit.emit(this.mydevdayForm.value);
+
+  }
+
+  onFileSelected(event: any) {
+
+    const file: File = event.target.files[0]
+
+    this.mydevdayForm.patchValue({image: file})
+
   }
 
 }
