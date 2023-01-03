@@ -28,4 +28,14 @@ export class MydevdayService {
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 
+  removeDay(id: number) {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
+
+  updateDay(id: number, formData: FormData): Observable<FormData> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<FormData>(url, formData);
+  }
+
 }

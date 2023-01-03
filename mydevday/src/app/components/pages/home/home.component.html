@@ -2,12 +2,10 @@
     <h1>Veja os dias compartilhados</h1>
 
     <div class="search-container">
-
         <form>
             <fa-icon [icon]="faSearch"></fa-icon>
             <input type="text" placeholder="Ou pesquise pelo título" (input)="search($event)">
         </form>
-
     </div>
 
     <div *ngIf="days.length > 0; else noDays" class="before-days">

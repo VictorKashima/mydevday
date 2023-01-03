@@ -14,6 +14,7 @@ import { MydevdayFormComponent } from './components/mydevday-form/mydevday-form.
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DayComponent } from './components/pages/day/day.component';
+import { EditDayComponent } from './components/pages/edit-day/edit-day.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DayComponent } from './components/pages/day/day.component';
     NewDayComponent,
     MydevdayFormComponent,
     MessagesComponent,
-    DayComponent
+    DayComponent,
+    EditDayComponent
   ],
   imports: [
     BrowserModule,

@@ -10,15 +10,16 @@ import { Mydevday } from 'src/app/Mydevday';
 export class MydevdayFormComponent {
   @Output() onSubmit = new EventEmitter<Mydevday>()
   @Input() btnText!: string
+  @Input() mydevdayData: Mydevday | null = null;
 
   mydevdayForm!: FormGroup
 
   ngOnInit(): void {
     this.mydevdayForm = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [Validators.required]),
-      text: new FormControl('', [Validators.required]),
-      image: new FormControl(''),
+      id: new FormControl(this.mydevdayData ? this.mydevdayData.id: ''),
+      title: new FormControl(this.mydevdayData ? this.mydevdayData.title: '', [Validators.required]),
+      text: new FormControl(this.mydevdayData ? this.mydevdayData.text: '', [Validators.required]),
+      image: new FormControl(this.mydevdayData ? this.mydevdayData.image: ''),
     });
   }
 
