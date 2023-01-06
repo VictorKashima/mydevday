@@ -29,30 +29,34 @@
     text-align: center;
 }
 
-.before-days {
-    display: flex;
-    justify-content: center;
-}
-
 .days-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 80%;
+    gap: 3rem;
+    max-width: 85%;
     justify-content: space-between;
 }
 
 .days {
-    width: 30%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     text-align: center;
 }
 
-.days img {
+.days > img {
     width: 100%;
-    margin-bottom: .5em;
+    height: 50%;
+    object-fit: contain;
 }
 
-.days h3,.days p {
-    margin-bottom: .5em;
+
+.days-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .days .date {
