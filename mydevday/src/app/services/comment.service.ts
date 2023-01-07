@@ -11,12 +11,14 @@ import { Response } from '../Response';
 
 export class CommentService {
   private baseApiUrl = environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}/api/mydevdays}`;
+  private apiUrl = `${this.baseApiUrl}api/mydevdays/`;
 
   constructor(private http: HttpClient) { }
 
   createComment(data: Comment): Observable<Response<Comment>> {
-    const url = `${this.apiUrl}/${data.mydevday_id}/comments`;
+    console.log(data.mydevday_id);
+    console.log(this.apiUrl);
+    const url = `${this.apiUrl}${data.mydevday_id}/comments`;
     return this.http.post<Response<Comment>>(url, data);
   }
 

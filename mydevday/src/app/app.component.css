@@ -1,4 +1,6 @@
-.container {
+
+
+router-outlet {
     background: #FFF;
     min-height: 75vh;
 }
