@@ -1,5 +1,5 @@
 <div class="home-container">
-    <h1>Veja os dias compartilhados</h1>
+    <h2>Veja os dias compartilhados</h2>
 
     <div class="search-container">
         <form>
@@ -15,7 +15,7 @@
                 <h3> {{ mydevday.title }} </h3>
                 <p class="date">Data: {{ mydevday.created_at }}</p>
                 <p>Comentários: {{ mydevday.comments!.length }}</p>
-                <p><a routerLink="mydevdays/{{ mydevday.id }}">Detalhes</a></p>
+                <a routerLink="mydevdays/{{ mydevday.id }}">Detalhes</a>
             </div>
         </div>
     </div>

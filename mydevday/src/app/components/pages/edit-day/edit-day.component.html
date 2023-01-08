@@ -1,5 +1,7 @@
 <div *ngIf="mydevday">
-    <h2>Editando o dia <span>{{ mydevday.title }}</span></h2>
+    <div class="create-edit-title">
+        <h2>Editando o dia <span>{{ mydevday.title }}</span></h2>
+    </div>
 
     <app-mydevday-form (onSubmit)="editHandler($event)" [mydevdayData]="mydevday" [btnText]="btnText"></app-mydevday-form>
 </div>

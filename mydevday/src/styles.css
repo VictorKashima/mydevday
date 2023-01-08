@@ -23,21 +23,21 @@ a:hover {
 .formulario {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #myForm {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     width: 50%;
-    gap: 1.5rem;
+    gap: 2rem;
     font-size: 1.3rem;
 }
 
 #myForm label {
     display: flex;
     flex-direction: column;
-    gap: .3rem;
+    gap: .2rem;
 }
 
 #myForm input,
@@ -85,4 +85,12 @@ a:hover {
     margin: 0 .5rem;
     cursor: pointer;
     color: #000;
+}
+
+/* Edit page title */
+.create-edit-title {
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,5 +1,5 @@
 <div class="day" *ngIf="mydevday">
-    <h1> {{ mydevday.title }} </h1>
+    <h2> {{ mydevday.title }} </h2>
     <img src="{{ baseApiUrl }}uploads/{{ mydevday.image }}" 
     alt="{{ mydevday.title }}">
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="comments">
-        <p>Comentários {{ mydevday.comments!.length > 0 ? mydevday.comments!.length : 0}}</p>
+        <p>Comentários: {{ mydevday.comments!.length > 0 ? mydevday.comments!.length : 0}}</p>
 
         <div *ngIf="mydevday.comments!.length > 0; else noComments">
             <div class="comment-container" *ngFor="let comment of mydevday.comments">
@@ -35,21 +35,19 @@
 
     <div class="comment-form">
         <h3>Deixe um comentário:</h3>
-        <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
-            <div class="form-group">
-                <label>
-                    <textarea formControlName="user_comment" placeholder="O que você quer comentar?" required></textarea>
-                    <div *ngIf="user_comment.invalid && formDir.submitted" class="inputError">
-                        <p *ngIf="user_comment.errors?.['required']">O comentário é obrigatório.</p>
-                    </div>
-                </label>
-                <label>
-                    <input formControlName="user_name" type="text" placeholder="Digite seu nome" required>
-                    <div *ngIf="user_name.invalid && formDir.submitted" class="inputError">
-                        <p *ngIf="user_comment.errors?.['required']">O seu nome é obrigatório.</p>
-                    </div>
-                </label>
-            </div>
+        <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)" id="myForm">
+            <label>
+                <textarea formControlName="user_comment" placeholder="O que você quer comentar?" required></textarea>
+                <div *ngIf="user_comment.invalid && formDir.submitted" class="inputError">
+                    <p *ngIf="user_comment.errors?.['required']">O comentário é obrigatório.</p>
+                </div>
+            </label>
+            <label>
+                <input formControlName="user_name" type="text" placeholder="Digite seu nome" required>
+                <div *ngIf="user_name.invalid && formDir.submitted" class="inputError">
+                    <p *ngIf="user_comment.errors?.['required']">O seu nome é obrigatório.</p>
+                </div>
+            </label>
             <input type="submit" value="Comentar">
         </form>
     </div>
